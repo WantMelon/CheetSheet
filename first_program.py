@@ -115,6 +115,8 @@ print(numbers[0])
 print(numbers[0:3])
 print(numbers[4:])
 print(numbers[-2:])
+print(numbers[2::3])
+print(numbers[::-1]) #reverse
 print(len(numbers))
 print(min(numbers))
 
@@ -135,5 +137,19 @@ print(account)
 combined = zip(account, numbers)
 print(list(combined)) #list/dict
 
+def add_five(x):
+    return x + 5
+result = list(map(add_five, numbers))
+print(result)
+
+result = list(map(lambda x: x + 5, numbers))
+print(result)
+
+numbers = list(range(10))
+result = list(filter(lambda x: x & 1, numbers))
+print(result)
+
 numbers.clear()
 account.clear()
+result.clear()
+
