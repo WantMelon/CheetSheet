@@ -3,6 +3,9 @@ print('This is a string!')
 print('''This is second string
 in the program''')
 print(f'This is {3}-rd string\nBut it f-string')
+a = 5
+print('String without f', a)
+print('String with format {0}, {1}'.format(1, 3))
 
 print('-' * 20)
 
@@ -32,6 +35,10 @@ print(str[n:]) #string
 
 n = str.count(' ') + 1
 print(f'In the string {n} words')
+
+str = str.strip()
+print(ord('A'), ord('F')) #65, 70
+print(chr(65), chr(70)) #A, F
 
 arr = str.split(' ') #list
 dic = {} #dictionary
@@ -66,6 +73,19 @@ print(f'12 * 6 = {n}')
 def square_root(n):
     return n ** .5
 print(square_root(121))
+
+def func(a, b=5, c=10):
+    print('a = {0}, b = {1}, c = {2}'.format(a, b, c))
+func(3, 7)
+func(25, c=24)
+
+def total(a=5, *numbers, **phonebook):
+    print('a = ', a)
+    for x in numbers:
+        print('number', x)
+    for first_part, second_part in phonebook.items():
+        print(first_part, second_part)
+total(10,1,2,3,Jack=1123,John=2231,Inge=1500)
 
 print('-' * 20)
 
@@ -117,6 +137,7 @@ print(numbers[4:])
 print(numbers[-2:])
 print(numbers[2::3])
 print(numbers[::-1]) #reverse
+same_list = numbers[:] #same_list = list
 print(len(numbers))
 print(min(numbers))
 
